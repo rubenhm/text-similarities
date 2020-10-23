@@ -1,0 +1,10 @@
+google-cloud-storage
+google-cloud-vision
+google-cloud-texttospeech
+google-cloud-automl
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+ffmpeg-python
+pydub
+ghostscript
