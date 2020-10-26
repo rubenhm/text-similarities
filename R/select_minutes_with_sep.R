@@ -10,9 +10,9 @@ files <- list.files(path = 'data/data-raw/' ,pattern = "pdf$", full.names = TRUE
 # Read text files
 minutes <- lapply(files, pdf_text)
 
-# Select the files that contain "Summary of Economic Projections"
+# Select the files that contain the header "Summary of Economic Projections"
 indexes <- lapply(minutes, function(x) {
-  sep <- x %>% stringr::str_detect('Summary of Economic') %>% any()
+  sep <- x %>% stringr::str_detect('\\n[ ]+Summary of Economic Projections\\n') %>% any()
 }) %>% unlist
 
 sep_minutes <- files[indexes]
