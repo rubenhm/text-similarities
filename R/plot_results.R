@@ -54,7 +54,7 @@ date_fmt <- function(x) {
   
   dates <- df.chart$date %>% unique()
   
-  df.chart %>%
+  p.simil <- df.chart %>%
     ggplot(aes(x = date, y = similarity, color = name)) +
     geom_line(aes(group = name),size = 1.2) +
     geom_point(aes(group = name), size = 2) +
@@ -76,4 +76,6 @@ date_fmt <- function(x) {
       legend.position = c(0.8, 0.40),
       panel.grid.minor.x = element_blank()
     )
+  
+  ggsave(filename = 'charts/plot_fomc_similarities.png', plot = p.simil, width = 16, height = 9)
   }
