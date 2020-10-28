@@ -16,13 +16,17 @@ df_simil <- pd$read_pickle("data/data-gen/df_simil.p")
 {
 titlecolor = '#3a6f8f' # RGB 58 111 143 (for font)
 fontcolor = '#414B56'  # RGB 65 75 86
-top_left_chart_title_theme = function(font_size = 10, title_color = titlecolor, font_color = fontcolor) {
+top_left_chart_title_theme = function(font_size = 18, title_color = titlecolor, font_color = fontcolor) {
   ggplot2::theme(plot.title = ggplot2::element_text(size = font_size + 2, face = "bold", color = titlecolor, hjust = 0, vjust = 0),
                  plot.subtitle = ggplot2::element_text(size = font_size, face = "bold", color = fontcolor, hjust = 0, vjust = 0),
-                 plot.caption = ggplot2::element_text(color = 'black', size = 10, hjust = 0, vjust = 0),
+                 plot.caption = ggplot2::element_text(color = 'black', size = font_size, hjust = 0, vjust = 0),
                  plot.background = ggplot2::element_blank(),
                  panel.background = ggplot2::element_blank(),
-                 legend.background = ggplot2::element_blank())
+                 legend.background = ggplot2::element_blank(),
+                 legend.text = element_text(size = font_size),
+                 axis.text.x = element_text(size = font_size - 4),
+                 axis.text.y = element_text(size = font_size)
+  )
   }
 }
 
@@ -43,7 +47,7 @@ short_fmt <- function(x) {
 }
 
 date_fmt <- function(x) {
-  format(x,"%m/%d/%Y")
+  format(x,"%m/%d/%y")
 }
 
 
@@ -66,7 +70,7 @@ date_fmt <- function(x) {
       x = "FOMC Meeting date",
       y = ""
     ) +
-    scale_x_date(breaks = dates[seq(from = 1, by = 3, to = NROW(dates))], labels = date_fmt) + 
+    scale_x_date(breaks = dates[seq(from = 1, by = 4, to = NROW(dates))], labels = date_fmt) + 
     scale_y_continuous(breaks = seq(from = 0.60, to = 1, by = 0.05), labels = short_fmt) +
     theme_light() +
     top_left_chart_title_theme() +
