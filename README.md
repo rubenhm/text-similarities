@@ -28,47 +28,47 @@ For comparison, the similarity between the SEPs and the National Summary of the 
 is much smaller. The similarity between the Minutes and the Beige Book is also smaller between 2007 and late 2016.
 
 Interestingly, since mid-2016, the similarity between the Minutes and the Beige Book appears to be
-comparable to the similarity between the Minutes and the SEPs.[^note]
+comparable to the similarity between the Minutes and the SEPs. [^note]
 
 [^note]: The cosine similarity is not a proper distance metric, which may explain why the similarity
 between the SEPs and the Beige Book is much smaller.
 
 
-[[charts/plot_fomc_similarities.png]]
+![similarities](charts/plot_fomc_similarities.png)
 
 
 ## Replication steps
 
 1. Download data: 
-  + [[R/download_fomc_minutes.R]] 
-  + [[R/select_minutes_with_sep.R]] 
-  + [[R/download_beige_book.R]]
+    + `R/download_fomc_minutes.R` 
+    + `R/select_minutes_with_sep.R` 
+    + `R/download_beige_book.R`
 2. Sign up for Google Cloud Computing.
-  + Upload PDFs in [[data/minutes_sep_pdf.7z]] to a storage bucket.
-  + Activate the Vision AI API.
+    + Upload PDFs in `data/minutes_sep_pdf.7z` to a storage bucket.
+    + Activate the Vision AI API.
 3. Create a python environment using:
-  + [[python/requirements.txt]]
+    + `python/requirements.txt`
 4. Interact with the Vision API using 
-  + [[code/gcompfiles.sh]]
+    + `code/gcompfiles.sh`
 5. Process OCR results: 
-  + [[python/Process_ocr_results.ipynb]]
+    + `python/Process_ocr_results.ipynb`
 6. Prepare data for analysis:
-  + [[R/organize_paragraphs.R]]
-  + [[R/organize_beige_book.R]]
+    + `R/organize_paragraphs.R`
+    + `R/organize_beige_book.R`
 7. Calculate embeddings and similarity measures:
-  + [[python/Calculate_similarities.ipynb]]
+    + `python/Calculate_similarities.ipynb`
 8. Generate chart
-  + [[R/plot_result.R]]
+    + `R/plot_result.R`
 9. Results:
-  + [[data/data-gen/output_json.7z]]
-  + [[data/data-gen/big_df.p]]
-  + [[data/data-gen/sent_minutes.p]]
-  + [[data/data-gen/sent_seps.p]]
-  + [[data/data-gen/sent_beigebook.p]]
-  + [[data/data-gen/df_simil.p]]
+    + `data/data-gen/output_json.7z`
+    + `data/data-gen/big_df.p`
+    + `data/data-gen/sent_minutes.p`
+    + `data/data-gen/sent_seps.p`
+    + `data/data-gen/sent_beigebook.p`
+    + `data/data-gen/df_simil.p`
 10. Data:
-  + [[data/minutes_sep_pdf.7z]]
-  + [[data/beige_book_html.7z]]
+    + `data/minutes_sep_pdf.7z`
+    + `data/beige_book_html.7z`
 
   
 ## Attributions
