@@ -60,11 +60,11 @@ As expected, the degree of similarity with movie summaries is much lower.
     + [`R/select_minutes_with_sep.R`](R/select_minutes_with_sep.R) 
     + [`R/download_beige_book.R`](R/download_beige_book.R)
     + [`R/download_and_process_movies.R`](R/download_and_process_movies.R)
-2. Sign up for Google Cloud Computing.
+2. Sign up for [Google Cloud Computing Services](https://cloud.google.com/).
     + Upload PDFs in [`data/minutes_sep_pdf.7z`](data/minutes_sep_pdf.7z) to a storage bucket.
     + Activate the Vision AI API.
 3. Create a python environment using:
-    + [`python/requirements.txt`](`python/requirements.txt)
+    + [`python/requirements.txt`](python/requirements.txt)
 4. Interact with the Vision API using 
     + [`code/gcompfiles.sh`](code/gcompfiles.sh)
 5. Process OCR results: 
