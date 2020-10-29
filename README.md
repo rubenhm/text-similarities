@@ -49,6 +49,8 @@ We added a fourth type of document to the comparison to verify that the similari
 Using the New York Times API, we downloaded the movie summaries of movies that opened on the date of the FOMC meeting for each issue of the Minutes, SEPs, and Beige Book. We then calculated the similarity between the movie summaries and each of the Federal Reserve documents.
 As expected, the degree of similarity with movie summaries is much lower.
 
+Interestingly, the highest similarity among the Federal Reserve Documents and the movie summaries was with the Beige Book (prior to 2017). This is reasonable since the language of the Beige Book was intended to be more colloquial prior to its 2017 redesign.
+
 ![cosine_movies](charts/plot_cosine_movies.png)
 ![euclid_movies](charts/plot_euclid_movies.png)
 ![pearsn_movies](charts/plot_pearsn_movies.png)
