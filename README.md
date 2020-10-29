@@ -62,7 +62,7 @@ As expected, the degree of similarity with movie summaries is much lower.
     + [`R/download_and_process_movies.R`](R/download_and_process_movies.R)
 2. Sign up for [Google Cloud Computing Services](https://cloud.google.com/).
     + Upload PDFs in [`data/minutes_sep_pdf.7z`](data/minutes_sep_pdf.7z) to a storage bucket.
-    + Activate the Vision AI API.
+    + Activate the [Vision AI](https://cloud.google.com/vision) API.
 3. Create a python environment using:
     + [`python/requirements.txt`](python/requirements.txt)
 4. Interact with the Vision API using 
@@ -94,6 +94,6 @@ As expected, the degree of similarity with movie summaries is much lower.
 ## Attributions
 
 + We followed this project <https://github.com/kazunori279/pdf2audiobook> in using Google's 
-`Cloud Vision AI` to OCR the PDFs of the Minutes/SEPs. 
+[`Cloud Vision AI`](https://cloud.google.com/vision) to OCR the PDFs of the Minutes/SEPs. 
  This process provides detailed information on the location and size
  of the text in the PDF file used to strip the relevant paragraphs.
